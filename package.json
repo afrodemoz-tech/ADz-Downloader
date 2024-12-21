@@ -1,0 +1,27 @@
+{
+  "name": "adz-downloader",
+  "version": "1.0.0",
+  "description": "A cross-platform desktop application for downloading YouTube videos and playlists, built with Electron and Python.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build",
+    "build:win": "electron-builder build --win",
+    "build:linux": "electron-builder build --linux",
+    "build:mac": "electron-builder build --mac"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AfroDemo/ADz-Downloader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AfroDemo/ADz-Downloader/issues"
+  },
+  "homepage": "https://github.com/AfroDemo/ADz-Downloader#readme",
+  "dependencies": {
+    "python-shell": "^5.0.0"
+  }
+}
