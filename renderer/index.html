@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ADz Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ADz Downloader</h1>
+
+      <div class="input-group">
+        <label for="youtube-url">Youtube URL</label>
+        <input
+          type="text"
+          id="youtube-url"
+          name="youtube-url"
+          placeholder="Enter Youtube URL"
+        />
+      </div>
+
+      <div class="download-type">
+        <label>Download Type:</label>
+        <div>
+          <input
+            type="radio"
+            id="single-video"
+            name="download-type"
+            value="video"
+          />
+          <label for="single-video">Single video</label>
+
+          <input
+            type="radio"
+            id="playlist"
+            name="download-type"
+            value="playlist"
+          />
+          <label for="playlist">Playlist</label>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="save-path">Save Location:</label>
+        <input
+          type="text"
+          id="save-path"
+          name="save-path"
+          readonly
+          placeholder="Select download directory"
+        />
+        <button class="browse-button">Browse</button>
+      </div>
+
+      <button id="download-button">Download</button>
+
+      <div class="process-container">
+        <progress id="download-progress" value="0" max="100"></progress>
+        <div id="status-message"></div>
+      </div>
+
+      <div class="log-container">
+        <h3>Download Log:</h3>
+        <textarea id="download-log" readonly></textarea>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
