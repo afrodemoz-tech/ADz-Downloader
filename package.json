@@ -8,7 +8,44 @@
     "build": "electron-builder build",
     "build:win": "electron-builder build --win",
     "build:linux": "electron-builder build --linux",
+    "build:ubuntu": "electron-builder --linux deb",
     "build:mac": "electron-builder build --mac"
+  },
+  "build": {
+    "appId": "com.afrodemoz.adzdownloader",
+    "productName": "ADz Downloader",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!**/*.ts",
+      "!*.code-workspace",
+      "!LICENSE.md",
+      "!package.json",
+      "!package-lock.json",
+      "!src/",
+      "!e2e/",
+      "!hooks/",
+      "!.angular-cli.json",
+      "!_config.yml",
+      "!karma.conf.js",
+      "!tsconfig.json",
+      "!tslint.json"
+    ],
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Utility",
+      "icon": "build/icon.png",
+      "desktop": {
+        "Name": "YouTube Downloader",
+        "Comment": "Download YouTube videos and playlists",
+        "Categories": "Utility;Network"
+      }
+    }
   },
   "repository": {
     "type": "git",
@@ -23,5 +60,8 @@
   "homepage": "https://github.com/AfroDemo/ADz-Downloader#readme",
   "dependencies": {
     "python-shell": "^5.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.1.8"
   }
 }
